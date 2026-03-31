@@ -69,7 +69,7 @@ const Index = () => {
             alt="Clinical Supply Co."
             width={512}
             height={512}
-            className="mx-auto w-36 md:w-44 opacity-80 brightness-200"
+            className="mx-auto w-36 md:w-44"
           />
         </FadeSection>
       </section>
