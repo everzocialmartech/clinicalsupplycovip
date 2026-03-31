@@ -115,7 +115,7 @@ const Index = () => {
                   type="button"
                   onClick={handleContinue}
                   disabled={!canProceed}
-                  className="inline-flex items-center justify-center rounded-xl bg-primary text-primary-foreground font-medium px-10 py-3.5 text-sm tracking-wide btn-glow disabled:opacity-30 disabled:pointer-events-none transition-opacity"
+                  className="inline-flex items-center justify-center rounded-xl bg-white text-background font-medium px-12 py-3.5 text-sm tracking-widest uppercase border border-white/20 shadow-[0_0_20px_rgba(255,255,255,0.15)] hover:bg-transparent hover:text-white hover:shadow-[0_0_30px_rgba(255,255,255,0.1)] disabled:opacity-30 disabled:pointer-events-none transition-all duration-300"
                 >
                   Continue
                 </button>
