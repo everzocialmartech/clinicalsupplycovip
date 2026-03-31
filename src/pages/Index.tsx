@@ -88,7 +88,7 @@ const Index = () => {
           </FadeSection>
         </section>
 
-        <div className="w-10 h-px bg-foreground/10 mx-auto my-4" />
+        <div className="w-10 h-px bg-foreground/10 mx-auto my-2" />
 
         {step === "profile" && (
           <section className="py-8 pb-20">
