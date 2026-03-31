@@ -27,8 +27,8 @@ const StarRating = ({ value, onChange }: StarRatingProps) => {
               size={40}
               className={`transition-all duration-200 ${
                 isActive
-                  ? "fill-primary text-primary star-glow"
-                  : "fill-transparent text-muted-foreground/40"
+                  ? "fill-white text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]"
+                  : "fill-transparent text-white/30"
               }`}
             />
           </button>
