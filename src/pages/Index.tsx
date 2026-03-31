@@ -1,6 +1,8 @@
 import { useState, useRef, useEffect } from "react";
 import StarRating from "@/components/StarRating";
 import ThankYouModal from "@/components/ThankYouModal";
+import cscLogo from "@/assets/csc-logo-white.png";
+import productImage from "@/assets/product-sponges.png";
 
 const useScrollFadeIn = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -23,7 +25,7 @@ const useScrollFadeIn = () => {
   return { ref, isVisible };
 };
 
-const FadeSection = ({ children, className = "", delay = 0 }: { children: React.ReactNode; className?: string; delay?: number }) => {
+const FadeSection = ({ children, className = "" }: { children: React.ReactNode; className?: string }) => {
   const { ref, isVisible } = useScrollFadeIn();
   return (
     <div
@@ -31,7 +33,6 @@ const FadeSection = ({ children, className = "", delay = 0 }: { children: React.
       className={`${className} transition-all duration-700 ease-out ${
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
       }`}
-      style={{ transitionDelay: `${delay}ms` }}
     >
       {children}
     </div>
@@ -52,39 +53,75 @@ const Index = () => {
   };
 
   return (
-    <div className="vip-bg-pattern min-h-screen relative">
-      <div className="relative z-10 flex flex-col items-center px-6 py-20 md:py-32">
-        <form onSubmit={handleSubmit} className="w-full max-w-[640px] space-y-24">
+    <div className="vip-bg-gradient">
 
-          {/* Hero */}
-          <FadeSection className="text-center space-y-6">
-            <p className="text-primary/70 text-xs tracking-[0.3em] uppercase font-medium">
-              Clinical Supply Company
-            </p>
-            <h1 className="text-3xl md:text-5xl font-semibold text-foreground leading-tight tracking-tight text-balance">
-              You're part of a very small group.
-            </h1>
-            <p className="text-muted-foreground text-base md:text-lg leading-relaxed max-w-md mx-auto">
-              We sent you something because we trust your opinion.
-            </p>
-            <p className="text-muted-foreground/50 text-sm">
-              This invite was shared with a select group of long-time CSC partners.
-            </p>
-          </FadeSection>
+      {/* ── SECTION 1: Hero ── */}
+      <section className="flex flex-col items-center justify-center text-center px-6 py-28 md:py-40 min-h-[85vh]">
+        <FadeSection className="space-y-8 max-w-xl">
+          <h1 className="text-4xl md:text-6xl font-medium text-foreground leading-tight tracking-tight text-balance uppercase">
+            You're in the 1%
+          </h1>
+          <p className="text-muted-foreground text-base md:text-lg">
+            Not everyone gets this.
+          </p>
+          <img
+            src={cscLogo}
+            alt="Clinical Supply Co."
+            width={512}
+            height={512}
+            className="mx-auto w-36 md:w-44 opacity-80 brightness-200"
+          />
+        </FadeSection>
+      </section>
 
-          {/* Product Context */}
-          <FadeSection className="text-center space-y-4">
-            <p className="text-foreground/90 text-base md:text-lg leading-relaxed">
-              You've received our <span className="text-primary font-medium">2×2 Cotton Swabs</span> in your order.
+      {/* ── SECTION 2: Product + Context ── */}
+      <section className="flex flex-col items-center px-6 py-20 md:py-28">
+        <FadeSection className="max-w-2xl w-full space-y-12">
+          <div className="space-y-5 max-w-lg">
+            <h2 className="text-xl md:text-2xl font-medium text-foreground leading-snug">
+              You've been with us through a lot.<br />
+              And we don't take that lightly.
+            </h2>
+            <p className="text-muted-foreground text-sm leading-relaxed">
+              We tucked something into your order today.
             </p>
-            <p className="text-muted-foreground text-sm leading-relaxed max-w-md mx-auto">
-              Before we expand this further, we'd value your honest feedback.
+            <p className="text-muted-foreground text-sm leading-relaxed">
+              It's a small thank you, and a chance for us to learn from you.
             </p>
-          </FadeSection>
+            <p className="text-muted-foreground text-sm leading-relaxed">
+              Scan the code below, answer one honest question,<br />
+              and we'll add <span className="text-primary font-medium">$25 in store credit</span> to your account.
+            </p>
+            <p className="text-muted-foreground/60 text-xs mt-4">
+              Best, CSC team
+            </p>
+          </div>
+
+          {/* Product image */}
+          <div className="flex justify-center">
+            <img
+              src={productImage}
+              alt="Posi-Shield Non-Woven Sponges"
+              loading="lazy"
+              width={1024}
+              height={1024}
+              className="w-72 md:w-96 product-blend"
+            />
+          </div>
+
+          <p className="text-muted-foreground/40 text-xs text-center">
+            No catch. No minimum. Just our way of saying thanks.
+          </p>
+        </FadeSection>
+      </section>
+
+      {/* ── SECTION 3: Feedback Form ── */}
+      <section className="flex flex-col items-center px-6 py-20 md:py-28">
+        <form onSubmit={handleSubmit} className="w-full max-w-[600px] space-y-16">
 
           {/* Rating */}
           <FadeSection className="text-center space-y-8">
-            <p className="text-foreground/80 text-sm tracking-wide">
+            <p className="text-foreground/80 text-sm tracking-wide font-medium">
               How would you rate the product?
             </p>
             <div className="flex justify-center">
@@ -94,7 +131,7 @@ const Index = () => {
 
           {/* Feedback */}
           <FadeSection className="space-y-4">
-            <p className="text-foreground/80 text-sm tracking-wide text-center">
+            <p className="text-foreground/80 text-sm tracking-wide text-center font-medium">
               What's one thing you love ordering from CSC — and one thing you wish we did better?
             </p>
             <textarea
@@ -106,7 +143,7 @@ const Index = () => {
             />
           </FadeSection>
 
-          {/* Profile Fields */}
+          {/* Optional Fields */}
           <FadeSection className="space-y-4">
             <p className="text-muted-foreground/40 text-xs text-center tracking-wide uppercase mb-6">
               Optional
@@ -140,7 +177,7 @@ const Index = () => {
           </FadeSection>
 
         </form>
-      </div>
+      </section>
 
       <ThankYouModal open={showThankYou} onOpenChange={setShowThankYou} />
     </div>
