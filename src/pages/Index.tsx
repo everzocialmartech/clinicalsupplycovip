@@ -94,7 +94,7 @@ const Index = () => {
             <FadeSection className="space-y-6">
               <div className="space-y-2.5">
                 {[
-                  { value: name, setter: setName, placeholder: "Name", required: true },
+                  { value: name, setter: setName, placeholder: "Name" },
                   { value: position, setter: setPosition, placeholder: "Position" },
                   { value: practice, setter: setPractice, placeholder: "Practice Name" },
                   { value: hobby, setter: setHobby, placeholder: "Hobby" },
