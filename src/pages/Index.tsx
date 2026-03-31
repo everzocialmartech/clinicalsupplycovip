@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import StarRating from "@/components/StarRating";
 import ThankYouModal from "@/components/ThankYouModal";
 import cscLogo from "@/assets/csc-logo-white.png";
+import spongesImg from "@/assets/2x2_woven_sponges.png";
 
 const useScrollFadeIn = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -128,9 +129,14 @@ const Index = () => {
             <form onSubmit={handleSubmit} className="space-y-10">
 
               {/* Product reveal */}
-              <FadeSection className="text-center space-y-2">
+              <FadeSection className="text-center space-y-4">
+                <img
+                  src={spongesImg}
+                  alt="Posi-Shield 2X2 Non-Woven Sponges"
+                  className="mx-auto w-48 md:w-56 animate-[scale-in_0.6s_ease-out_both] drop-shadow-2xl"
+                />
                 <p className="text-foreground/90 text-sm md:text-base">
-                  You've received the <span className="text-primary font-medium">2×2 Cotton Swabs</span> gift.
+                  You've received the <span className="text-primary font-medium">Posi-Shield 2X2 Non-Woven Sponges</span> Gift!
                 </p>
               </FadeSection>
 
