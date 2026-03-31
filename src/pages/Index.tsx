@@ -16,7 +16,7 @@ const useScrollFadeIn = () => {
           observer.unobserve(entry.target);
         }
       },
-      { threshold: 0.15 }
+      { threshold: 0.1 }
     );
     if (ref.current) observer.observe(ref.current);
     return () => observer.disconnect();
@@ -31,7 +31,7 @@ const FadeSection = ({ children, className = "" }: { children: React.ReactNode; 
     <div
       ref={ref}
       className={`${className} transition-all duration-700 ease-out ${
-        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
       }`}
     >
       {children}
@@ -47,130 +47,129 @@ const Index = () => {
   const [practice, setPractice] = useState("");
   const [showThankYou, setShowThankYou] = useState(false);
 
+  const canSubmit = rating > 0 && feedback.trim().length > 0;
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    if (!canSubmit) return;
     setShowThankYou(true);
   };
 
   return (
     <div className="vip-bg-gradient">
+      <div className="max-w-xl mx-auto px-6">
 
-      {/* ── SECTION 1: Hero ── */}
-      <section className="flex flex-col items-center justify-center text-center px-6 pt-16 pb-12 md:pt-24 md:pb-16">
-        <FadeSection className="space-y-5 max-w-xl">
-          <h1 className="text-3xl md:text-5xl font-medium text-foreground leading-tight tracking-tight text-balance uppercase">
-            You're in the 1%
-          </h1>
-          <p className="text-muted-foreground text-sm md:text-base">
-            Not everyone gets this.
-          </p>
-          <img
-            src={cscLogo}
-            alt="Clinical Supply Co."
-            width={512}
-            height={512}
-            className="mx-auto w-28 md:w-36 pt-4"
-          />
-        </FadeSection>
-      </section>
+        {/* ── Hero ── */}
+        <section className="pt-16 pb-10 md:pt-24 md:pb-14 text-center">
+          <FadeSection className="space-y-4">
+            <img
+              src={cscLogo}
+              alt="Clinical Supply Co."
+              width={512}
+              height={512}
+              className="mx-auto w-24 md:w-28 mb-8"
+            />
+            <h1 className="text-3xl md:text-5xl font-medium text-foreground leading-[1.1] tracking-tight uppercase">
+              You're in the 1%
+            </h1>
+            <p className="text-foreground/60 text-base md:text-lg font-light">
+              Not everyone gets this.
+            </p>
+          </FadeSection>
+        </section>
 
-      {/* ── SECTION 2: Product + Context ── */}
-      <section className="flex flex-col items-center px-6 py-10 md:py-14">
-        <FadeSection className="max-w-xl w-full space-y-8">
-          <div className="space-y-3">
-            <h2 className="text-lg md:text-xl font-medium text-foreground leading-snug">
-              You've been with us through a lot.<br />
-              And we don't take that lightly.
-            </h2>
-            <p className="text-muted-foreground text-sm leading-relaxed">
-              We tucked something into your order today.
-              It's a small thank you, and a chance for us to learn from you.
-            </p>
-            <p className="text-muted-foreground text-sm leading-relaxed">
-              Scan the code below, answer one honest question,
-              and we'll add <span className="text-primary font-medium">$25 in store credit</span> to your account.
-            </p>
-            <p className="text-muted-foreground/50 text-xs pt-2">
-              Best, CSC team
-            </p>
-          </div>
-
-          <div className="flex justify-center">
+        {/* ── Product ── */}
+        <section className="py-6 md:py-8">
+          <FadeSection className="flex flex-col items-center space-y-4">
             <img
               src={productImage}
               alt="Posi-Shield Non-Woven Sponges"
               loading="lazy"
               width={1024}
               height={1024}
-              className="w-56 md:w-72 product-blend"
+              className="w-48 md:w-64 product-blend"
             />
-          </div>
-
-          <p className="text-muted-foreground/40 text-xs text-center">
-            No catch. No minimum. Just our way of saying thanks.
-          </p>
-        </FadeSection>
-      </section>
-
-      {/* ── SECTION 3: Feedback Form ── */}
-      <section className="flex flex-col items-center px-6 py-10 md:py-14 pb-20">
-        <form onSubmit={handleSubmit} className="w-full max-w-xl space-y-8">
-
-          <FadeSection className="text-center space-y-5">
-            <p className="text-foreground/80 text-sm tracking-wide font-medium">
-              How would you rate the product?
+            <p className="text-foreground/90 text-sm md:text-base text-center">
+              You received our <span className="text-primary font-medium">2×2 Non-Woven Sponges</span> in your latest order.
             </p>
-            <div className="flex justify-center">
-              <StarRating value={rating} onChange={setRating} />
-            </div>
-          </FadeSection>
-
-          <FadeSection className="space-y-3">
-            <p className="text-foreground/80 text-sm tracking-wide text-center font-medium">
-              What's one thing you love ordering from CSC — and one thing you wish we did better?
+            <p className="text-foreground/50 text-sm text-center">
+              We'd love your honest feedback before we roll them out further.
             </p>
-            <textarea
-              value={feedback}
-              onChange={(e) => setFeedback(e.target.value)}
-              placeholder="Your thoughts..."
-              rows={3}
-              className="w-full bg-input/50 text-foreground placeholder:text-muted-foreground/40 rounded-lg px-5 py-3.5 text-sm leading-relaxed resize-none border border-border/30 focus:border-primary/40 focus:outline-none focus:ring-1 focus:ring-primary/20 transition-all"
-            />
           </FadeSection>
+        </section>
 
-          <FadeSection className="space-y-3">
-            <p className="text-muted-foreground/40 text-xs text-center tracking-wide uppercase mb-3">
-              Optional
-            </p>
-            <div className="space-y-2.5">
-              {[
-                { value: name, setter: setName, placeholder: "Name" },
-                { value: position, setter: setPosition, placeholder: "Position" },
-                { value: practice, setter: setPractice, placeholder: "Practice Name" },
-              ].map(({ value, setter, placeholder }) => (
-                <input
-                  key={placeholder}
-                  type="text"
-                  value={value}
-                  onChange={(e) => setter(e.target.value)}
-                  placeholder={placeholder}
-                  className="w-full bg-input/50 text-foreground placeholder:text-muted-foreground/40 rounded-lg px-5 py-3 text-sm border border-border/30 focus:border-primary/40 focus:outline-none focus:ring-1 focus:ring-primary/20 transition-all"
-                />
-              ))}
-            </div>
-          </FadeSection>
+        {/* ── Divider ── */}
+        <div className="w-12 h-px bg-foreground/10 mx-auto my-6" />
 
-          <FadeSection className="text-center pt-2">
-            <button
-              type="submit"
-              className="inline-flex items-center justify-center rounded-lg bg-primary text-primary-foreground font-medium px-10 py-3.5 text-sm tracking-wide btn-glow"
-            >
-              Submit & Unlock Your $25 Credit
-            </button>
-          </FadeSection>
+        {/* ── Feedback Form ── */}
+        <section className="py-6 md:py-8 pb-20">
+          <form onSubmit={handleSubmit} className="space-y-10">
 
-        </form>
-      </section>
+            {/* Rating */}
+            <FadeSection className="space-y-5">
+              <label className="block text-foreground text-sm font-medium text-center">
+                How would you rate the product?
+              </label>
+              <div className="flex justify-center">
+                <StarRating value={rating} onChange={setRating} />
+              </div>
+            </FadeSection>
+
+            {/* Feedback */}
+            <FadeSection className="space-y-3">
+              <label className="block text-foreground text-sm font-medium text-center">
+                What's one thing you love ordering from CSC — and one thing you wish we did better?
+              </label>
+              <textarea
+                value={feedback}
+                onChange={(e) => setFeedback(e.target.value)}
+                placeholder="Your thoughts..."
+                rows={3}
+                className="w-full bg-foreground/[0.06] text-foreground placeholder:text-foreground/30 rounded-xl px-5 py-4 text-sm leading-relaxed resize-none border border-foreground/[0.08] focus:border-primary/50 focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all"
+              />
+            </FadeSection>
+
+            {/* Optional Fields */}
+            <FadeSection className="space-y-3">
+              <p className="text-foreground/30 text-xs text-center tracking-widest uppercase">
+                Optional
+              </p>
+              <div className="space-y-2.5">
+                {[
+                  { value: name, setter: setName, placeholder: "Name" },
+                  { value: position, setter: setPosition, placeholder: "Position" },
+                  { value: practice, setter: setPractice, placeholder: "Practice Name" },
+                ].map(({ value, setter, placeholder }) => (
+                  <input
+                    key={placeholder}
+                    type="text"
+                    value={value}
+                    onChange={(e) => setter(e.target.value)}
+                    placeholder={placeholder}
+                    className="w-full bg-foreground/[0.06] text-foreground placeholder:text-foreground/30 rounded-xl px-5 py-3 text-sm border border-foreground/[0.08] focus:border-primary/50 focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all"
+                  />
+                ))}
+              </div>
+            </FadeSection>
+
+            {/* CTA */}
+            <FadeSection className="text-center pt-2">
+              <button
+                type="submit"
+                disabled={!canSubmit}
+                className="inline-flex items-center justify-center rounded-xl bg-primary text-primary-foreground font-medium px-10 py-3.5 text-sm tracking-wide btn-glow disabled:opacity-30 disabled:pointer-events-none transition-opacity"
+              >
+                Submit Feedback
+              </button>
+              <p className="text-foreground/30 text-xs mt-3">
+                Complete the rating and feedback above to continue.
+              </p>
+            </FadeSection>
+
+          </form>
+        </section>
+
+      </div>
 
       <ThankYouModal open={showThankYou} onOpenChange={setShowThankYou} />
     </div>
