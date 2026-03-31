@@ -6,43 +6,43 @@
 
 @layer base {
   :root {
-    --background: 180 92% 5%;
+    --background: 207 60% 10%;
     --foreground: 0 0% 96%;
 
-    --card: 178 90% 8%;
+    --card: 207 55% 14%;
     --card-foreground: 0 0% 96%;
 
-    --popover: 178 90% 8%;
+    --popover: 207 55% 14%;
     --popover-foreground: 0 0% 96%;
 
     --primary: 185 80% 55%;
-    --primary-foreground: 180 92% 5%;
+    --primary-foreground: 207 60% 10%;
 
-    --secondary: 178 40% 14%;
+    --secondary: 207 40% 18%;
     --secondary-foreground: 0 0% 90%;
 
-    --muted: 178 25% 18%;
-    --muted-foreground: 180 15% 58%;
+    --muted: 207 30% 20%;
+    --muted-foreground: 207 20% 58%;
 
     --accent: 185 80% 55%;
-    --accent-foreground: 180 92% 5%;
+    --accent-foreground: 207 60% 10%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 178 25% 16%;
-    --input: 178 25% 13%;
+    --border: 207 25% 18%;
+    --input: 207 25% 15%;
     --ring: 185 80% 55%;
 
     --radius: 0.75rem;
 
-    --sidebar-background: 180 92% 5%;
+    --sidebar-background: 207 60% 10%;
     --sidebar-foreground: 0 0% 96%;
     --sidebar-primary: 185 80% 55%;
-    --sidebar-primary-foreground: 180 92% 5%;
-    --sidebar-accent: 178 30% 14%;
+    --sidebar-primary-foreground: 207 60% 10%;
+    --sidebar-accent: 207 30% 18%;
     --sidebar-accent-foreground: 0 0% 90%;
-    --sidebar-border: 178 25% 16%;
+    --sidebar-border: 207 25% 18%;
     --sidebar-ring: 185 80% 55%;
 
     --glow-cyan: 0 0 30px hsl(185 80% 55% / 0.25);
@@ -68,9 +68,9 @@
   }
 }
 
-/* Main page gradient — CMYK(97,5,7,90) to CMYK(97,5,7,68) */
+/* Dark navy gradient matching postcard */
 .vip-bg-gradient {
-  background: linear-gradient(180deg, hsl(180 92% 5%) 0%, hsl(178 95% 16%) 100%);
+  background: linear-gradient(180deg, hsl(210 55% 8%) 0%, hsl(205 50% 18%) 100%);
   min-height: 100vh;
 }
 
