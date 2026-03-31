@@ -98,14 +98,13 @@ const Index = () => {
                   { value: position, setter: setPosition, placeholder: "Position" },
                   { value: practice, setter: setPractice, placeholder: "Practice Name" },
                   { value: hobby, setter: setHobby, placeholder: "Hobby" },
-                ].map(({ value, setter, placeholder, required }) => (
+                ].map(({ value, setter, placeholder }) => (
                   <input
                     key={placeholder}
                     type="text"
                     value={value}
                     onChange={(e) => setter(e.target.value)}
                     placeholder={placeholder}
-                    required={required}
                     className="w-full bg-foreground/[0.06] text-foreground placeholder:text-foreground/25 rounded-xl px-5 py-3 text-sm border border-foreground/[0.08] focus:border-primary/50 focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all"
                   />
                 ))}
