@@ -70,7 +70,7 @@ const Index = () => {
       <div className="max-w-lg mx-auto px-6">
 
         {/* ── Hero ── */}
-        <section className="pt-14 pb-8 md:pt-20 md:pb-10 text-center">
+        <section className="pt-14 pb-4 md:pt-20 md:pb-6 text-center">
           <FadeSection className="space-y-4">
             <img
               src={cscLogo}
