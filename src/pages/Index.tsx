@@ -125,18 +125,21 @@ const Index = () => {
         )}
 
         {step === "feedback" && (
-          <section className="py-8 pb-20">
-            <form onSubmit={handleSubmit} className="space-y-10">
+           <section className="py-4 pb-20">
+            <form onSubmit={handleSubmit} className="space-y-8">
 
               {/* Product reveal */}
-              <FadeSection className="text-center space-y-4">
+              <FadeSection className="text-center space-y-3">
                 <img
                   src={spongesImg}
                   alt="Posi-Shield 2X2 Non-Woven Sponges"
-                  className="mx-auto w-48 md:w-56 animate-[scale-in_0.6s_ease-out_both] drop-shadow-2xl"
+                  className="mx-auto w-48 md:w-56 drop-shadow-2xl animate-fade-in [animation-duration:0.8s]"
                 />
                 <p className="text-foreground/90 text-sm md:text-base">
                   You've received the <span className="text-primary font-medium">Posi-Shield 2X2 Non-Woven Sponges</span> Gift!
+                </p>
+                <p className="text-foreground/40 text-xs md:text-sm">
+                  Rate the product and share your feedback below to claim your <span className="text-primary font-medium">$25 store credit</span>.
                 </p>
               </FadeSection>
 
