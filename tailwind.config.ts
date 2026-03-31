@@ -95,6 +95,7 @@ export default {
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-up": "fade-up 0.8s ease-out forwards",
         "fade-in": "fade-in 0.6s ease-out forwards",
+        "pop-up-grow": "pop-up-grow 0.9s cubic-bezier(0.34,1.56,0.64,1) forwards",
       },
     },
   },

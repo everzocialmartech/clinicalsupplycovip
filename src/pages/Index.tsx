@@ -133,7 +133,7 @@ const Index = () => {
                 <img
                   src={spongesImg}
                   alt="Posi-Shield 2X2 Non-Woven Sponges"
-                  className="mx-auto w-40 md:w-48 drop-shadow-2xl animate-fade-in [animation-duration:1.2s] [animation-fill-mode:both] [animation-delay:0.2s] mb-4"
+                  className="mx-auto w-40 md:w-48 drop-shadow-2xl animate-pop-up-grow [animation-delay:1s] [animation-fill-mode:both] mb-4 origin-bottom"
                 />
                 <p className="text-foreground/90 text-sm md:text-base">
                   You've received the <span className="text-primary font-medium">Posi-Shield 2X2 Non-Woven Sponges</span> Gift!
