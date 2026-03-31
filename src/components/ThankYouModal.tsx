@@ -39,7 +39,7 @@ const ThankYouModal = ({ open, onOpenChange }: ThankYouModalProps) => {
           href="https://clinicalsupplycompany.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center justify-center rounded-xl bg-primary text-primary-foreground font-medium px-8 py-3 text-sm btn-glow"
+          className="inline-flex items-center justify-center rounded-xl bg-white text-background font-medium px-12 py-3.5 text-sm tracking-widest uppercase border border-white/20 shadow-[0_0_20px_rgba(255,255,255,0.15)] hover:bg-transparent hover:text-white hover:shadow-[0_0_30px_rgba(255,255,255,0.1)] transition-all duration-300"
         >
           Continue Shopping
         </a>
