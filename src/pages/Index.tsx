@@ -49,7 +49,7 @@ const Index = () => {
   const [feedback, setFeedback] = useState("");
   const [showThankYou, setShowThankYou] = useState(false);
 
-  const canProceed = name.trim().length > 0;
+  const canProceed = name.trim().length > 0 && position.trim().length > 0 && practice.trim().length > 0 && hobby.trim().length > 0;
   const canSubmit = rating > 0 && feedback.trim().length > 0;
 
   const handleContinue = () => {
@@ -94,18 +94,17 @@ const Index = () => {
             <FadeSection className="space-y-6">
               <div className="space-y-2.5">
                 {[
-                  { value: name, setter: setName, placeholder: "Name", required: true },
+                  { value: name, setter: setName, placeholder: "Name" },
                   { value: position, setter: setPosition, placeholder: "Position" },
                   { value: practice, setter: setPractice, placeholder: "Practice Name" },
                   { value: hobby, setter: setHobby, placeholder: "Hobby" },
-                ].map(({ value, setter, placeholder, required }) => (
+                ].map(({ value, setter, placeholder }) => (
                   <input
                     key={placeholder}
                     type="text"
                     value={value}
                     onChange={(e) => setter(e.target.value)}
                     placeholder={placeholder}
-                    required={required}
                     className="w-full bg-foreground/[0.06] text-foreground placeholder:text-foreground/25 rounded-xl px-5 py-3 text-sm border border-foreground/[0.08] focus:border-primary/50 focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all"
                   />
                 ))}

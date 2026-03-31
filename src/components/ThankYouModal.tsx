@@ -16,27 +16,23 @@ const ThankYouModal = ({ open, onOpenChange }: ThankYouModalProps) => {
           You're all set.
         </h2>
 
-        <p className="text-foreground/80 text-sm leading-relaxed mb-6">
+        <p className="text-foreground/80 text-sm leading-relaxed mb-4">
           Your <span className="text-primary font-medium">$25 store credit</span> has been added to your account.
         </p>
 
-        <div className="bg-foreground/[0.06] rounded-xl px-6 py-4 mb-6 border border-foreground/[0.06]">
+        <div className="bg-foreground/[0.06] rounded-xl px-6 py-4 mb-5 border border-foreground/[0.06]">
           <p className="text-foreground font-mono text-lg tracking-widest mb-1">IAMVIP</p>
           <p className="text-foreground/50 text-xs">
             Use this code at checkout.
           </p>
         </div>
 
-        <p className="text-foreground/60 text-sm leading-relaxed mb-2">
+        <p className="text-foreground/60 text-sm leading-relaxed mb-4">
           This only applies to lateral products — no minimum, no expiry.
         </p>
 
-        <p className="text-foreground/70 text-sm leading-relaxed mb-2">
+        <p className="text-foreground/70 text-sm leading-relaxed mb-8">
           While the rest of the market is raising prices on everything — we're not. We want to make sure you know, we got you covered.
-        </p>
-
-        <p className="text-primary text-sm font-medium mb-8">
-          We've got you.
         </p>
 
         <a
