@@ -138,8 +138,8 @@ const Index = () => {
                 <p className="text-foreground/90 text-sm md:text-base">
                   You've received the <span className="text-primary font-medium">Posi-Shield 2X2 Non-Woven Sponges</span> Gift!
                 </p>
-                <p className="text-foreground/40 text-xs md:text-sm">
-                  Rate the product and share your feedback below to claim your <span className="text-primary font-medium">$25 store credit</span>.
+                <p className="text-foreground/40 text-xs md:text-sm whitespace-nowrap">
+                  Rate &amp; share feedback to claim your <span className="text-primary font-medium">$25 store credit</span>.
                 </p>
               </FadeSection>
 
