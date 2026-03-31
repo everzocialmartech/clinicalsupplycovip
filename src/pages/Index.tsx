@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import StarRating from "@/components/StarRating";
 import ThankYouModal from "@/components/ThankYouModal";
 import cscLogo from "@/assets/csc-logo-white.png";
+import spongesImg from "@/assets/2x2_woven_sponges.png";
 
 const useScrollFadeIn = () => {
   const ref = useRef<HTMLDivElement>(null);
