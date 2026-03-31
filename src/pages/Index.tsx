@@ -56,12 +56,12 @@ const Index = () => {
     <div className="vip-bg-gradient">
 
       {/* ── SECTION 1: Hero ── */}
-      <section className="flex flex-col items-center justify-center text-center px-6 py-28 md:py-40 min-h-[85vh]">
-        <FadeSection className="space-y-8 max-w-xl">
-          <h1 className="text-4xl md:text-6xl font-medium text-foreground leading-tight tracking-tight text-balance uppercase">
+      <section className="flex flex-col items-center justify-center text-center px-6 pt-16 pb-12 md:pt-24 md:pb-16">
+        <FadeSection className="space-y-5 max-w-xl">
+          <h1 className="text-3xl md:text-5xl font-medium text-foreground leading-tight tracking-tight text-balance uppercase">
             You're in the 1%
           </h1>
-          <p className="text-muted-foreground text-base md:text-lg">
+          <p className="text-muted-foreground text-sm md:text-base">
             Not everyone gets this.
           </p>
           <img
@@ -69,35 +69,32 @@ const Index = () => {
             alt="Clinical Supply Co."
             width={512}
             height={512}
-            className="mx-auto w-36 md:w-44"
+            className="mx-auto w-28 md:w-36 pt-4"
           />
         </FadeSection>
       </section>
 
       {/* ── SECTION 2: Product + Context ── */}
-      <section className="flex flex-col items-center px-6 py-20 md:py-28">
-        <FadeSection className="max-w-2xl w-full space-y-12">
-          <div className="space-y-5 max-w-lg">
-            <h2 className="text-xl md:text-2xl font-medium text-foreground leading-snug">
+      <section className="flex flex-col items-center px-6 py-10 md:py-14">
+        <FadeSection className="max-w-xl w-full space-y-8">
+          <div className="space-y-3">
+            <h2 className="text-lg md:text-xl font-medium text-foreground leading-snug">
               You've been with us through a lot.<br />
               And we don't take that lightly.
             </h2>
             <p className="text-muted-foreground text-sm leading-relaxed">
               We tucked something into your order today.
-            </p>
-            <p className="text-muted-foreground text-sm leading-relaxed">
               It's a small thank you, and a chance for us to learn from you.
             </p>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Scan the code below, answer one honest question,<br />
+              Scan the code below, answer one honest question,
               and we'll add <span className="text-primary font-medium">$25 in store credit</span> to your account.
             </p>
-            <p className="text-muted-foreground/60 text-xs mt-4">
+            <p className="text-muted-foreground/50 text-xs pt-2">
               Best, CSC team
             </p>
           </div>
 
-          {/* Product image */}
           <div className="flex justify-center">
             <img
               src={productImage}
@@ -105,7 +102,7 @@ const Index = () => {
               loading="lazy"
               width={1024}
               height={1024}
-              className="w-72 md:w-96 product-blend"
+              className="w-56 md:w-72 product-blend"
             />
           </div>
 
@@ -116,11 +113,10 @@ const Index = () => {
       </section>
 
       {/* ── SECTION 3: Feedback Form ── */}
-      <section className="flex flex-col items-center px-6 py-20 md:py-28">
-        <form onSubmit={handleSubmit} className="w-full max-w-[600px] space-y-16">
+      <section className="flex flex-col items-center px-6 py-10 md:py-14 pb-20">
+        <form onSubmit={handleSubmit} className="w-full max-w-xl space-y-8">
 
-          {/* Rating */}
-          <FadeSection className="text-center space-y-8">
+          <FadeSection className="text-center space-y-5">
             <p className="text-foreground/80 text-sm tracking-wide font-medium">
               How would you rate the product?
             </p>
@@ -129,8 +125,7 @@ const Index = () => {
             </div>
           </FadeSection>
 
-          {/* Feedback */}
-          <FadeSection className="space-y-4">
+          <FadeSection className="space-y-3">
             <p className="text-foreground/80 text-sm tracking-wide text-center font-medium">
               What's one thing you love ordering from CSC — and one thing you wish we did better?
             </p>
@@ -138,17 +133,16 @@ const Index = () => {
               value={feedback}
               onChange={(e) => setFeedback(e.target.value)}
               placeholder="Your thoughts..."
-              rows={4}
-              className="w-full bg-input/50 text-foreground placeholder:text-muted-foreground/40 rounded-lg px-5 py-4 text-sm leading-relaxed resize-none border border-border/30 focus:border-primary/40 focus:outline-none focus:ring-1 focus:ring-primary/20 transition-all"
+              rows={3}
+              className="w-full bg-input/50 text-foreground placeholder:text-muted-foreground/40 rounded-lg px-5 py-3.5 text-sm leading-relaxed resize-none border border-border/30 focus:border-primary/40 focus:outline-none focus:ring-1 focus:ring-primary/20 transition-all"
             />
           </FadeSection>
 
-          {/* Optional Fields */}
-          <FadeSection className="space-y-4">
-            <p className="text-muted-foreground/40 text-xs text-center tracking-wide uppercase mb-6">
+          <FadeSection className="space-y-3">
+            <p className="text-muted-foreground/40 text-xs text-center tracking-wide uppercase mb-3">
               Optional
             </p>
-            <div className="space-y-3">
+            <div className="space-y-2.5">
               {[
                 { value: name, setter: setName, placeholder: "Name" },
                 { value: position, setter: setPosition, placeholder: "Position" },
@@ -160,17 +154,16 @@ const Index = () => {
                   value={value}
                   onChange={(e) => setter(e.target.value)}
                   placeholder={placeholder}
-                  className="w-full bg-input/50 text-foreground placeholder:text-muted-foreground/40 rounded-lg px-5 py-3.5 text-sm border border-border/30 focus:border-primary/40 focus:outline-none focus:ring-1 focus:ring-primary/20 transition-all"
+                  className="w-full bg-input/50 text-foreground placeholder:text-muted-foreground/40 rounded-lg px-5 py-3 text-sm border border-border/30 focus:border-primary/40 focus:outline-none focus:ring-1 focus:ring-primary/20 transition-all"
                 />
               ))}
             </div>
           </FadeSection>
 
-          {/* CTA */}
-          <FadeSection className="text-center pt-4">
+          <FadeSection className="text-center pt-2">
             <button
               type="submit"
-              className="inline-flex items-center justify-center rounded-lg bg-primary text-primary-foreground font-medium px-10 py-4 text-sm tracking-wide btn-glow"
+              className="inline-flex items-center justify-center rounded-lg bg-primary text-primary-foreground font-medium px-10 py-3.5 text-sm tracking-wide btn-glow"
             >
               Submit & Unlock Your $25 Credit
             </button>
