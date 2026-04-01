@@ -184,7 +184,7 @@ const Index = () => {
               {/* Feedback */}
               <FadeSection className="space-y-3">
                 <label className="block text-foreground text-sm font-medium text-center">
-                  What's one thing you love ordering from CSC — and one thing you wish we did better?
+                  What's one thing you love ordering from CSC and one thing you wish we did better?
                 </label>
                 <textarea
                   value={feedback}
