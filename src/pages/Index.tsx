@@ -49,6 +49,7 @@ const Index = () => {
 
   const [rating, setRating] = useState(0);
   const [feedback, setFeedback] = useState("");
+  const [honestReview, setHonestReview] = useState("");
   const [showThankYou, setShowThankYou] = useState(false);
 
   const canProceed = name.trim().length > 0 && position.trim().length > 0 && practice.trim().length > 0;
