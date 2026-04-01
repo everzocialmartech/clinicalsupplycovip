@@ -50,7 +50,7 @@ const Index = () => {
   const [feedback, setFeedback] = useState("");
   const [showThankYou, setShowThankYou] = useState(false);
 
-  const canProceed = name.trim().length > 0 && position.trim().length > 0 && practice.trim().length > 0 && hobby.trim().length > 0;
+  const canProceed = name.trim().length > 0 && position.trim().length > 0 && practice.trim().length > 0;
   const canSubmit = rating > 0 && feedback.trim().length > 0;
 
   const handleContinue = () => {
