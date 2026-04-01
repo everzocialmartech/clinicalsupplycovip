@@ -44,13 +44,13 @@ const Index = () => {
   const [name, setName] = useState("");
   const [position, setPosition] = useState("");
   const [practice, setPractice] = useState("");
-  const [hobby, setHobby] = useState("");
+  
 
   const [rating, setRating] = useState(0);
   const [feedback, setFeedback] = useState("");
   const [showThankYou, setShowThankYou] = useState(false);
 
-  const canProceed = name.trim().length > 0 && position.trim().length > 0 && practice.trim().length > 0 && hobby.trim().length > 0;
+  const canProceed = name.trim().length > 0 && position.trim().length > 0 && practice.trim().length > 0;
   const canSubmit = rating > 0 && feedback.trim().length > 0;
 
   const handleContinue = () => {
@@ -98,7 +98,6 @@ const Index = () => {
                   { value: name, setter: setName, placeholder: "Name" },
                   { value: position, setter: setPosition, placeholder: "Position" },
                   { value: practice, setter: setPractice, placeholder: "Practice Name" },
-                  { value: hobby, setter: setHobby, placeholder: "Hobby" },
                 ].map(({ value, setter, placeholder }) => (
                   <input
                     key={placeholder}
