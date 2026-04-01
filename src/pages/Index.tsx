@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import { ArrowLeft } from "lucide-react";
 import StarRating from "@/components/StarRating";
 import ThankYouModal from "@/components/ThankYouModal";
 import cscLogo from "@/assets/csc-logo-white.png";
