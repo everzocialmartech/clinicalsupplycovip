@@ -53,7 +53,7 @@ const Index = () => {
   const [showThankYou, setShowThankYou] = useState(false);
 
   const canProceed = name.trim().length > 0 && position.trim().length > 0 && practice.trim().length > 0;
-  const canSubmit = rating > 0 && feedback.trim().length > 0;
+  const canSubmit = rating > 0 && feedback.trim().length > 0 && honestReview.trim().length > 0;
 
   const handleContinue = () => {
     if (!canProceed) return;
