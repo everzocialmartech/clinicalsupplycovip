@@ -28,7 +28,7 @@ const ThankYouModal = ({ open, onOpenChange }: ThankYouModalProps) => {
         </div>
 
         <p className="text-foreground/60 text-sm leading-relaxed mb-4">
-          This only applies to lateral products — no minimum, no expiry.
+          This only applies to lateral products <br /> no minimum, no expiry.
         </p>
 
         <p className="text-foreground/70 text-sm leading-relaxed mb-8">
