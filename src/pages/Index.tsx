@@ -98,7 +98,6 @@ const Index = () => {
                   { value: name, setter: setName, placeholder: "Name" },
                   { value: position, setter: setPosition, placeholder: "Position" },
                   { value: practice, setter: setPractice, placeholder: "Practice Name" },
-                  { value: hobby, setter: setHobby, placeholder: "Hobby" },
                 ].map(({ value, setter, placeholder }) => (
                   <input
                     key={placeholder}
