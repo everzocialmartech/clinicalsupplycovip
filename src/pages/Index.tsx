@@ -135,15 +135,7 @@ const Index = () => {
         )}
 
         {step === "feedback" && (
-           <section className="py-4 pb-20 relative">
-            <button
-              type="button"
-              onClick={() => { setStep("profile"); window.scrollTo({ top: 0, behavior: "smooth" }); }}
-              className="absolute -top-10 left-0 flex items-center gap-1.5 text-foreground/50 hover:text-foreground text-sm transition-colors duration-200"
-            >
-              <ArrowLeft size={16} />
-              <span>Back</span>
-            </button>
+           <section className="py-4 pb-20">
             <form onSubmit={handleSubmit} className="space-y-8">
 
               {/* Product reveal */}
