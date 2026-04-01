@@ -178,6 +178,23 @@ const Index = () => {
                 />
               </FadeSection>
 
+              {/* Honest Review */}
+              <FadeSection className="space-y-3">
+                <label className="block text-foreground text-sm font-medium text-center">
+                  Give us your <span className="italic text-primary font-semibold">honest</span> review of the 2x2 Non-Woven Sponges
+                </label>
+                <p className="text-foreground/40 text-xs text-center">
+                  You're in our top 1% — your genuine perspective shapes what we build next.
+                </p>
+                <textarea
+                  value={honestReview}
+                  onChange={(e) => setHonestReview(e.target.value)}
+                  placeholder="What did you really think? Don't hold back..."
+                  rows={4}
+                  className="w-full bg-foreground/[0.06] text-foreground placeholder:text-foreground/25 rounded-xl px-5 py-4 text-sm leading-relaxed resize-none border border-foreground/[0.08] focus:border-primary/50 focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all"
+                />
+              </FadeSection>
+
               {/* Submit */}
               <FadeSection className="text-center pt-2">
                 <button
