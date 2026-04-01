@@ -44,7 +44,7 @@ const Index = () => {
   const [name, setName] = useState("");
   const [position, setPosition] = useState("");
   const [practice, setPractice] = useState("");
-  const [hobby, setHobby] = useState("");
+  
 
   const [rating, setRating] = useState(0);
   const [feedback, setFeedback] = useState("");
