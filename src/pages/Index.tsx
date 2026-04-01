@@ -67,7 +67,17 @@ const Index = () => {
   };
 
   return (
-    <div className="vip-bg-gradient">
+    <div className="vip-bg-gradient relative">
+      {step === "feedback" && (
+        <button
+          type="button"
+          onClick={() => { setStep("profile"); window.scrollTo({ top: 0, behavior: "smooth" }); }}
+          className="fixed top-6 left-6 z-50 flex items-center gap-1.5 text-foreground/50 hover:text-foreground text-sm transition-colors duration-200"
+        >
+          <ArrowLeft size={16} />
+          <span>Back</span>
+        </button>
+      )}
       <div className="max-w-lg mx-auto px-6">
 
         {/* ── Hero ── */}
