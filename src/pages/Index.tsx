@@ -164,20 +164,6 @@ const Index = () => {
                 </div>
               </FadeSection>
 
-              {/* Feedback */}
-              <FadeSection className="space-y-3">
-                <label className="block text-foreground text-sm font-medium text-center">
-                  What's one thing you love ordering from CSC — and one thing you wish we did better?
-                </label>
-                <textarea
-                  value={feedback}
-                  onChange={(e) => setFeedback(e.target.value)}
-                  placeholder="Your thoughts..."
-                  rows={3}
-                  className="w-full bg-foreground/[0.06] text-foreground placeholder:text-foreground/25 rounded-xl px-5 py-4 text-sm leading-relaxed resize-none border border-foreground/[0.08] focus:border-primary/50 focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all"
-                />
-              </FadeSection>
-
               {/* Honest Review */}
               <FadeSection className="space-y-3">
                 <label className="block text-foreground text-sm font-medium text-center">
@@ -191,6 +177,20 @@ const Index = () => {
                   onChange={(e) => setHonestReview(e.target.value)}
                   placeholder="What did you really think? Don't hold back..."
                   rows={4}
+                  className="w-full bg-foreground/[0.06] text-foreground placeholder:text-foreground/25 rounded-xl px-5 py-4 text-sm leading-relaxed resize-none border border-foreground/[0.08] focus:border-primary/50 focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all"
+                />
+              </FadeSection>
+
+              {/* Feedback */}
+              <FadeSection className="space-y-3">
+                <label className="block text-foreground text-sm font-medium text-center">
+                  What's one thing you love ordering from CSC — and one thing you wish we did better?
+                </label>
+                <textarea
+                  value={feedback}
+                  onChange={(e) => setFeedback(e.target.value)}
+                  placeholder="Your thoughts..."
+                  rows={3}
                   className="w-full bg-foreground/[0.06] text-foreground placeholder:text-foreground/25 rounded-xl px-5 py-4 text-sm leading-relaxed resize-none border border-foreground/[0.08] focus:border-primary/50 focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all"
                 />
               </FadeSection>
