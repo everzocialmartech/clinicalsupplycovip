@@ -61,10 +61,23 @@ const Index = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!canSubmit) return;
     setShowThankYou(true);
+    try {
+      await fetch(
+        "https://script.google.com/macros/s/AKfycbyKhoUGYZVAVes8GfFmCT8bqyIVmTxIM2sS-Dz_lZTUtY4OAal7j2p9xeJaysM2W_DUYw/exec",
+        {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ name, position, practice, rating, honestReview, feedback }),
+        }
+      );
+    } catch (err) {
+      console.error("Failed to send to Google Sheets:", err);
+    }
   };
 
   return (
