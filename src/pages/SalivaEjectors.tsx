@@ -6,7 +6,8 @@ import cscLogo from "@/assets/csc-logo-white.png";
 import ejectorsImg from "@/assets/saliva-ejectors.png";
 
 // Paste the Apps Script web app URL for the saliva ejectors sheet here.
-const SHEET_ENDPOINT = "";
+const SHEET_ENDPOINT =
+  "https://script.google.com/macros/s/AKfycbySkZBqiuAFBmmZ5XtH-xQmbXr3ZDwfJUtlYa-ZgWarF11z42LM283NjYvZkMsxZQ/exec";
 
 const useScrollFadeIn = () => {
   const ref = useRef<HTMLDivElement>(null);
