@@ -3,7 +3,8 @@ import { ArrowLeft } from "lucide-react";
 import StarRating from "@/components/StarRating";
 import SalivaThankYouModal from "@/components/SalivaThankYouModal";
 import cscLogo from "@/assets/csc-logo-white.png";
-import ejectorsImg from "@/assets/saliva-ejectors.png";
+import whiteTip from "@/assets/ejector-white-tip.png.asset.json";
+import blueTip from "@/assets/ejector-blue-tip.png.asset.json";
 
 // Paste the Apps Script web app URL for the saliva ejectors sheet here.
 const SHEET_ENDPOINT =
@@ -164,13 +165,29 @@ const SalivaEjectors = () => {
 
               {/* Product reveal */}
               <FadeSection className="text-center space-y-3">
-                <img
-                  src={ejectorsImg}
-                  alt="CSC Saliva Ejectors"
-                  className="mx-auto w-40 md:w-48 drop-shadow-2xl animate-pop-up-grow [animation-delay:1s] [animation-fill-mode:both] mb-4 origin-bottom"
-                />
+                <div className="grid grid-cols-2 gap-3 mb-4">
+                  {[
+                    { src: whiteTip.url, label: "White Tip" },
+                    { src: blueTip.url, label: "Blue Tip" },
+                  ].map((p, i) => (
+                    <figure
+                      key={p.label}
+                      className="animate-pop-up-grow [animation-fill-mode:both] origin-bottom"
+                      style={{ animationDelay: `${1 + i * 0.2}s` }}
+                    >
+                      <img
+                        src={p.src}
+                        alt={`Posi-Shield Saliva Ejectors, White with ${p.label}`}
+                        className="w-full aspect-square object-cover rounded-xl shadow-2xl"
+                      />
+                      <figcaption className="text-foreground/60 text-xs mt-2 tracking-wide">
+                        White with {p.label}
+                      </figcaption>
+                    </figure>
+                  ))}
+                </div>
                 <p className="text-foreground/90 text-sm md:text-base">
-                  So… how were the <span className="text-primary font-medium">Saliva Ejectors</span>?
+                  So… how were the <span className="text-primary font-medium">Posi-Shield® Saliva Ejectors</span>?
                 </p>
                 <p className="text-foreground/50 text-xs md:text-sm leading-relaxed">
                   We sent them to people who know what makes a dental product worth reordering. Good, bad, or somewhere in between — we want the real answer.
