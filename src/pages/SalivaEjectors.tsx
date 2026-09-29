@@ -198,9 +198,6 @@ const SalivaEjectors = () => {
                 <h2 className="text-foreground text-sm font-medium tracking-wide uppercase">
                   You're the expert here
                 </h2>
-                <p className="text-foreground/50 text-xs md:text-sm leading-relaxed">
-                  We could run surveys with strangers. We'd rather ask the people using these every day — you know what works in a real practice and what gets annoying after eight hours.
-                </p>
               </FadeSection>
 
               {/* Rating */}
