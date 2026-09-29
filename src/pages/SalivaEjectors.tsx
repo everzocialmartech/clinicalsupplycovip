@@ -117,7 +117,7 @@ const SalivaEjectors = () => {
                 We came back to you
               </span>
               <span className="block mt-3 text-base md:text-lg font-light text-foreground/70 leading-relaxed">
-                Because when it comes to what works in a real practice, yours is the opinion we trust most.
+                Because when it comes to what <span className="font-semibold text-foreground">works in a real practice</span>, yours is the opinion we trust most.
               </span>
             </h1>
             <p className="inline-block rounded-full border border-primary/40 bg-primary/10 px-5 py-2 text-primary text-xs md:text-sm font-medium tracking-[0.3em] uppercase shadow-[0_0_20px_hsl(var(--primary)/0.35)]">
