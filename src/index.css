@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -48,7 +48,7 @@
     --glow-cyan: 0 0 24px hsl(185 75% 50% / 0.2);
     --glow-cyan-strong: 0 0 40px hsl(185 75% 50% / 0.35);
 
-    font-family: 'Jost', system-ui, sans-serif;
+    font-family: 'Work Sans', system-ui, sans-serif;
   }
 }
 
