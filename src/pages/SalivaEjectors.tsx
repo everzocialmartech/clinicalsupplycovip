@@ -257,7 +257,7 @@ const SalivaEjectors = () => {
               {/* Reorder trigger */}
               <FadeSection className="space-y-3">
                 <label className="block text-foreground text-sm font-medium text-center">
-                  What do you think about our new website?
+                  Oh… and what do you think about our new website?
                 </label>
                 <p className="text-foreground/50 text-xs text-center leading-relaxed">
                   We built it for you — we know the old one was a struggle.
