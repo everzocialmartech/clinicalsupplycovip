@@ -115,9 +115,6 @@ const SalivaEjectors = () => {
             <h1 className="text-2xl md:text-4xl font-medium text-foreground leading-[1.15] tracking-tight">
               We came back to you because you're one of the CSC customers whose opinion we trust most.
             </h1>
-            <p className="text-foreground/40 text-xs md:text-sm">
-              No sales pitch. No "right" answer. Just your honest opinion.
-            </p>
           </FadeSection>
         </section>
 
