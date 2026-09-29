@@ -243,8 +243,11 @@ const SalivaEjectors = () => {
               {/* Reorder trigger */}
               <FadeSection className="space-y-3">
                 <label className="block text-foreground text-sm font-medium text-center">
-                  What would make these a "yes, we're reordering" product for your practice?
+                  What do you think about our new website?
                 </label>
+                <p className="text-foreground/50 text-xs text-center leading-relaxed">
+                  We built it for you — we know the old one was a struggle.
+                </p>
                 <textarea
                   value={reorderTrigger}
                   onChange={(e) => setReorderTrigger(e.target.value)}
