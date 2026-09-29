@@ -189,9 +189,6 @@ const SalivaEjectors = () => {
                 <p className="text-foreground/90 text-sm md:text-base">
                   So… how were the <span className="text-primary font-medium">Posi-Shield® Saliva Ejectors</span>?
                 </p>
-                <p className="text-foreground/50 text-xs md:text-sm leading-relaxed">
-                  We sent them to people who know what makes a dental product worth reordering. Good, bad, or somewhere in between — we want the real answer.
-                </p>
               </FadeSection>
 
               {/* Expert positioning */}
