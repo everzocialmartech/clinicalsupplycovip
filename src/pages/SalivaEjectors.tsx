@@ -112,8 +112,13 @@ const SalivaEjectors = () => {
             <p className="text-foreground/40 text-xs tracking-[0.3em] uppercase">
               Welcome back
             </p>
-            <h1 className="text-2xl md:text-4xl font-medium text-foreground leading-[1.15] tracking-tight">
-              We came back to you because you're one of the CSC customers whose opinion we trust most.
+            <h1 className="text-foreground tracking-tight">
+              <span className="block text-4xl md:text-6xl font-medium leading-[1.05] uppercase">
+                We came back to you
+              </span>
+              <span className="block mt-3 text-base md:text-lg font-light text-foreground/70 leading-relaxed">
+                because you're one of the CSC customers whose opinion we trust most.
+              </span>
             </h1>
             <p className="text-primary text-xs tracking-[0.3em] uppercase">
               Still in the 1% VIP customers
