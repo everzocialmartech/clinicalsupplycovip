@@ -1,0 +1,2 @@
+- [x] Saliva ejectors code -> STILLVIP26
+- [ ] Hide Lovable badge
