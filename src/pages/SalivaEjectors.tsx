@@ -120,7 +120,7 @@ const SalivaEjectors = () => {
                 Because when it comes to what works in a real practice, yours is the opinion we trust most.
               </span>
             </h1>
-            <p className="text-primary text-xs tracking-[0.3em] uppercase">
+            <p className="inline-block rounded-full border border-primary/40 bg-primary/10 px-5 py-2 text-primary text-xs md:text-sm font-medium tracking-[0.3em] uppercase shadow-[0_0_20px_hsl(var(--primary)/0.35)]">
               Still in the 1% VIP customers
             </p>
           </FadeSection>
