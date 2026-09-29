@@ -26,8 +26,8 @@ const SalivaThankYouModal = ({ open, onOpenChange }: SalivaThankYouModalProps) =
 
         <div className="bg-foreground/[0.06] rounded-xl px-6 py-4 mb-5 border border-foreground/[0.06]">
           <p className="text-foreground font-mono text-lg tracking-widest mb-1">IAM1%VIP</p>
-          <p className="text-foreground/50 text-xs">
-            Use this code at checkout.
+          <p className="text-foreground/70 text-xs tracking-[0.2em] uppercase">
+            Use it at checkout
           </p>
         </div>
 
