@@ -117,7 +117,7 @@ const SalivaEjectors = () => {
                 We came back to you
               </span>
               <span className="block mt-3 text-base md:text-lg font-light text-foreground/70 leading-relaxed">
-                because you're one of the CSC customers whose opinion we trust most.
+                Because when it comes to what works in a real practice, yours is the opinion we trust most.
               </span>
             </h1>
             <p className="text-primary text-xs tracking-[0.3em] uppercase">
